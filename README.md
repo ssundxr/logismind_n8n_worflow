@@ -1,4 +1,4 @@
-# 🚀 LogiMind AI
+# LogiMind AI
 Agentic Logistics Intelligence Platform
 
 LogiMind AI is an end-to-end AI-powered logistics automation platform that transforms document-heavy freight operations into intelligent workflows using multi-agent systems, workflow orchestration, and automated business decisioning.
