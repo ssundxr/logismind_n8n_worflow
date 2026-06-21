@@ -1,36 +1,153 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 LogiMind AI
+Agentic Logistics Intelligence Platform
 
-## Getting Started
+LogiMind AI is an end-to-end AI-powered logistics automation platform that transforms document-heavy freight operations into intelligent workflows using multi-agent systems, workflow orchestration, and automated business decisioning.
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Traditional logistics workflows require manual review of invoices, bills of lading, packing lists, and shipment documents.
+
+LogiMind AI automates this process using a chain of AI agents that:
+
+- Classify logistics documents
+- Extract shipment information
+- Validate business-critical fields
+- Assess operational and compliance risks
+- Make approval decisions
+- Generate ERP-ready records
+- Send automated notifications
+
+## Architecture
+
+```text
+PDF Upload
+     ↓
+OCR Engine
+     ↓
+n8n Webhook
+     ↓
+Classification Agent
+     ↓
+Extraction Agent
+     ↓
+Validation Agent
+     ↓
+Risk Assessment Agent
+     ↓
+Business Decision Agent
+     ↓
+Conditional Routing
+    ↙        ↘
+Approved   Human Review
+    ↓          ↓
+ Gmail      Gmail
+    ↓          ↓
+Respond to Webhook
+     ↓
+Frontend Dashboard
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Document Intelligence
+- Invoice Classification
+- Bill of Lading Detection
+- Packing List Recognition
+- Delivery Order Classification
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Information Extraction
+Extracts:
+- Shipper
+- Consignee
+- Container Number
+- Ports
+- Cargo Description
+- Invoice Number
 
-## Learn More
+### Validation Engine
+Checks:
+- Missing fields
+- Invalid shipment metadata
+- Port validation
+- Invoice verification
 
-To learn more about Next.js, take a look at the following resources:
+### Risk Assessment
+Analyzes:
+- Operational Risk
+- Compliance Risk
+- Fraud Indicators
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Decision Engine
+Outputs:
+- Auto Approve
+- Human Review
+- Reject
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Notification System
+Automated Gmail notifications for:
+- Approved shipments
+- Human review requests
 
-## Deploy on Vercel
+## Tech Stack
+**Frontend:**
+- Next.js 15
+- TypeScript
+- Tailwind CSS
+- Shadcn UI
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Workflow Automation:**
+- n8n
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**AI Models:**
+- Google Gemini
+
+**Integrations:**
+- Gmail API
+- Webhooks
+
+**Deployment:**
+- Vercel
+- Docker
+
+## Screenshots
+
+**Platform Dashboard**
+![Platform Dashboard 1](assets/homepage1.png)
+![Platform Dashboard 2](assets/homepage2.png)
+
+**Upload Processing**
+![Upload Processing](assets/processing.png)
+
+**AI Workflow**
+![AI Workflow 1](assets/workflow1.png)
+![AI Workflow 2](assets/workflow2.png)
+
+**Approved Shipment**
+![Approved Shipment](assets/approved-result.png)
+
+**Human Review**
+![Human Review](assets/human-review-result.png)
+
+**Email Notifications**
+![Email Notifications](assets/email-notification.png)
+
+## Business Impact
+LogiMind AI demonstrates how Agentic AI can automate logistics operations by combining:
+- Prompt Engineering
+- Workflow Automation
+- Decision Intelligence
+- ERP Integration
+- Human-in-the-Loop Approval Systems
+
+## Future Enhancements
+- Multi-document OCR
+- SAP Integration
+- Oracle ERP Integration
+- RAG-powered Shipment Knowledge Base
+- Real-time Logistics Analytics
+- Multi-Agent Planning Systems
+
+## Author
+**Shyam Sunder**
+
+Built as an AI Solutions Engineering project demonstrating workflow automation, prompt engineering, ERP integration concepts, and agentic AI orchestration.
